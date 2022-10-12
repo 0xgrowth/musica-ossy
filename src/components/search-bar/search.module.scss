@@ -1,0 +1,41 @@
+@import "../../index.scss";
+
+.top_nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px 33px;
+    height: 50px;
+    gap: 50px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .search_bar {
+        width: 50%;
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        gap: 16px;
+
+        input {
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            color: $blue-text-color;
+
+            &::placeholder {
+                text-transform: capitalize;
+                font-size: .875rem;
+                font-weight: 600;
+            }
+        }
+    }
+}

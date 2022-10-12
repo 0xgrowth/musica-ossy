@@ -1,1 +1,177 @@
 @import "../../index.scss";
+
+.home {
+    position: absolute;
+    top: 80px;
+    left: 120px;
+    height: 100%;
+    width: 88vw;
+
+    .hero {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 375px;
+        gap: 50px;
+
+        .hero_left {
+            padding: 50px;
+            background-color: $main-blue;
+            width: 65%;
+            max-width: 750px;
+            height: 100%;
+            border-radius: 40px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            overflow: hidden;
+
+            >div {
+                &:nth-of-type(1) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+                    min-width: 50%;
+
+                    >span {
+                        text-transform: capitalize;
+                        font-size: .75rem;
+                    }
+
+                    >div {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+
+                        span {
+                            font-size: 2.1875rem;
+                            font-weight: 700;
+                            text-transform: capitalize;
+                        }
+
+                        p {
+                            font-size: .875rem;
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    position: relative;
+
+                    span {
+                        max-width: 100%;
+
+                        img {
+                            min-width: 100%;
+                        }
+
+                        &:nth-of-type(1) {
+                            position: absolute;
+                            top: -50px;
+                            right: 450px;
+                        }
+
+                        &:nth-of-type(2) {
+                            position: absolute;
+                            bottom: -60px;
+                            right: 280px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hero_right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 40%;
+            max-width: 550px;
+
+            h2 {
+                text-transform: capitalize;
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            .chart {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .song_container {
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    border-radius: 20px;
+                    background-color: $nav-icon-background;
+
+                    .song_image {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .song_info {
+                        margin-right: auto;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 3px;
+
+                        p {
+                            text-transform: capitalize;
+
+                            &:nth-of-type(1) {
+                                font-size: 1.0625rem;
+                            }
+
+                            &:nth-of-type(2) {
+                                font-size: .75rem;
+                                color: $dark-text-color;
+                            }
+
+                            &:nth-of-type(3) {
+                                display: flex;
+                                gap: 2px;
+                                align-items: center;
+                                font-size: 12px;
+
+                                span {
+                                    font-size: inherit;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .song_fav {
+                        border: 1px solid rgb(255, 255, 255, .11);
+                        border-radius: 50%;
+                        height: 35px;
+                        width: 35px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            max-width: 60%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

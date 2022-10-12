@@ -1,0 +1,65 @@
+@import "../../index.scss";
+
+.playing {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    padding: 20px;
+
+    .play_left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        img {
+            height: 75px;
+            width: 75px;
+            border-radius: 25px;
+            object-fit: cover;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            >span {
+                text-transform: capitalize;
+
+                &:nth-of-type(1) {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .play_center {
+        min-width: 55%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        >div {
+            &:nth-of-type(1) {
+                display: flex;
+                gap: 30px;
+            }
+
+            &:nth-of-type(2) {
+                width: 100%;
+            }
+        }
+    }
+
+    .play_right {
+        display: flex;
+        gap: 10px;
+    }
+}
