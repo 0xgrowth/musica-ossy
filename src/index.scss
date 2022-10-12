@@ -1,0 +1,21 @@
+// ! colors
+$main-background:rgb(29, 33, 35);
+$nav-icon-background:rgb(26, 30, 31);
+$nav-icon:rgb(239, 238, 224);
+$main-blue:rgb(96, 158, 175);
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background-color: $main-background;
+}
+
+.container {
+    position: relative;
+    color: white;
+}
