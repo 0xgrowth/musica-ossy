@@ -17,8 +17,8 @@ const Charts = () => {
         {
             id: 2,
             image: "2.png",
-            title: "golden age of 80s",
-            artist: "sean swadder",
+            title: "reggae \"n\" blues",
+            artist: "dj yk mule",
             time: {
                 hour: 2,
                 minute: 34,
@@ -28,8 +28,8 @@ const Charts = () => {
         {
             id: 3,
             image: "3.png",
-            title: "golden age of 80s",
-            artist: "sean swadder",
+            title: "tomorrow\'s tunes",
+            artist: "obi datti",
             time: {
                 hour: 2,
                 minute: 34,

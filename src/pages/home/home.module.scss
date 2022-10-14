@@ -7,18 +7,21 @@
     height: 100%;
     width: 88vw;
 
+    @include xtra-large {
+        width: 92vw;
+    }
+
     .hero {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        height: 375px;
+        height: 50vh;
         gap: 50px;
 
         .hero_left {
             padding: 50px;
             background-color: $main-blue;
-            width: 65%;
-            max-width: 750px;
+            width: min(65%, 1024px);
             height: 100%;
             border-radius: 40px;
             position: relative;
@@ -27,8 +30,12 @@
             overflow: hidden;
 
             >div {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
                 &:nth-of-type(1) {
-                    display: flex;
+                    align-items: flex-start;
                     flex-direction: column;
                     justify-content: space-between;
                     height: 100%;
@@ -36,7 +43,17 @@
 
                     >span {
                         text-transform: capitalize;
-                        font-size: .75rem;
+                        font-size: clamp(.75rem, 1vw, 1rem);
+
+                        &:nth-of-type(2) {
+                            display: flex;
+                            align-items: stretch;
+                            width: 70%;
+
+                            img {
+                                width: inherit;
+                            }
+                        }
                     }
 
                     >div {
@@ -45,38 +62,30 @@
                         gap: 15px;
 
                         span {
-                            font-size: 2.1875rem;
+                            font-size: clamp(2.1875rem, 2vw, 3.5rem);
                             font-weight: 700;
                             text-transform: capitalize;
                         }
 
                         p {
-                            font-size: .875rem;
+                            font-size: clamp(.875rem, 1vw, 3.5rem);
                         }
                     }
                 }
 
                 &:nth-of-type(2) {
-                    position: relative;
+                    position: absolute;
+                    height: 100%;
+                    right: 0;
+                    bottom: 0;
 
                     span {
-                        max-width: 100%;
-
-                        img {
-                            min-width: 100%;
-                        }
-
-                        &:nth-of-type(1) {
-                            position: absolute;
-                            top: -50px;
-                            right: 450px;
-                        }
-
-                        &:nth-of-type(2) {
-                            position: absolute;
-                            bottom: -60px;
-                            right: 280px;
-                        }
+                        position: absolute;
+                        right: 0;
+                        height: 100%;
+                        display: flex;
+                        align-items: stretch;
+                        justify-content: center;
                     }
                 }
             }
@@ -85,9 +94,10 @@
         .hero_right {
             display: flex;
             flex-direction: column;
+            justify-content: center;
             gap: 20px;
-            width: 40%;
-            max-width: 550px;
+            width: min(40%, 650px);
+            height: 80%;
 
             h2 {
                 text-transform: capitalize;
@@ -98,7 +108,9 @@
             .chart {
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 gap: 10px;
+                height: min(300px, 80%);
 
                 .song_container {
                     padding: 10px;
@@ -107,6 +119,7 @@
                     gap: 20px;
                     border-radius: 20px;
                     background-color: $nav-icon-background;
+                    height: 50%;
 
                     .song_image {
                         height: 60px;
@@ -132,21 +145,32 @@
 
                         p {
                             text-transform: capitalize;
+                            transition: all ease .25s;
 
                             &:nth-of-type(1) {
-                                font-size: 1.0625rem;
+                                font-size: clamp(1.0625rem, 1vw, 1.5rem);
+
+                                &:hover {
+                                    color: $blue-text-color;
+                                    cursor: pointer;
+                                }
                             }
 
                             &:nth-of-type(2) {
-                                font-size: .75rem;
+                                font-size: clamp(.75rem, 1vw, 1.5rem);
                                 color: $dark-text-color;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
                             }
 
                             &:nth-of-type(3) {
                                 display: flex;
                                 gap: 2px;
                                 align-items: center;
-                                font-size: 12px;
+                                font-size: clamp(.75rem, .7vw, 1rem);
 
                                 span {
                                     font-size: inherit;
@@ -164,6 +188,12 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        cursor: pointer;
+                        transition: all ease .25s;
+
+                        &:hover {
+                            background-color: rgb(96, 158, 175, .5);
+                        }
 
                         img {
                             max-width: 60%;

@@ -16,7 +16,7 @@ const Home = () => {
                                 r & b hits
                             </span>
                             <p>
-                                All, mine, Lie again, Petty call me everyday <br />
+                                All mine, Lie again, Petty call me everyday <br />
                                 Out of time, No love, Bad habit, <br />
                                 and so much more.
                             </p>
@@ -36,7 +36,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div className={style.hero_right}>
-                    <h2>top chart</h2>
+                    <h2>top charts</h2>
                     <Charts />
                 </div>
             </div>

@@ -19,7 +19,16 @@
         background-color: $nav-icon-background;
 
         .link {
+            transition: all ease-in-out .15s;
             cursor: pointer;
+
+            &:hover {
+                transform: scale(1.25);
+
+                svg>path {
+                    fill: #FACD66;
+                }
+            }
         }
     }
 }
